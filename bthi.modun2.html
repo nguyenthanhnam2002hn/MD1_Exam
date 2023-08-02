@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,3,3,6,8,6];
+    function insertNumberToArray(array,x,index) {
+        let arrayResult = [];
+        if (index >= 0 && index < array.length) {
+            for (let i = 0; i < array.length; i++) {
+                if (i !== index) {
+                    arrayResult.push(array[i]);
+                } else {
+                    arrayResult.push(x);
+                    arrayResult.push(array[i]);
+                }
+            }
+        } else {
+            return array;
+        }
+        return arrayResult;
+    }
+    num = insertNumberToArray(arr,20,2)
+    document.write('Mảng mới là: ' + num)
+</script>
+</body>
+</html>
